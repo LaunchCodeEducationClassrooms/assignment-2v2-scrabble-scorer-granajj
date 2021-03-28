@@ -110,7 +110,7 @@ let vowelBonusScorer = {
 };
 
 let scrabbleScorer = {
-  name: "Scrabble",
+  name: 'Scrabble',
   description: 'The traditional scoring algorithm',
   scoreFunction: oldScrabbleScorerFunc
 };

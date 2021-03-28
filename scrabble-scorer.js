@@ -130,6 +130,7 @@ function transform(pointStructure){
       newPointStructure[oldPointStructure[property][i].toLowerCase()] = property;
     }
   }
+  return newPointStructure
 }
 
 // Don't write any code below this line //

@@ -50,8 +50,6 @@ function scrabbleScore(word) {
 	return letterPoints;
  }
 
-let oldScrabbleScorerFunc = scrabbleScore;
-
 // your job is to finish writing these functions and variables that we've named //
 // don't change the names or your program won't work as expected. //
 
@@ -74,8 +72,6 @@ function simpleScore(word) {
 	return simplePoints;
  }
 
-let simpleScorerFunc = simpleScore;
-
 function vowelBonusScore(word) {
 	word = word.toUpperCase();
   
@@ -95,24 +91,22 @@ function vowelBonusScore(word) {
 	return vowelPoints;
  }
 
-let vowelBonusScorerFunc = vowelBonusScore;
-
 let simpleScorer = {
  name: 'Simple Score',
  description: 'Each letter is worth 1 point',
- scoreFunction: simpleScorerFunc
+ scoreFunction: simpleScore
 };
 
 let vowelBonusScorer = {
   name: 'Bonus Vowels',
   description: 'Vowels are 3 pts, consonants are 1 pt',
-  scoreFunction: vowelBonusScorerFunc
+  scoreFunction: vowelBonusScore
 };
 
 let scrabbleScorer = {
   name: 'Scrabble',
   description: 'The traditional scoring algorithm',
-  scoreFunction: oldScrabbleScorerFunc
+  scoreFunction: scrabbleScore
 };
 
 const scoringAlgorithms = [simpleScorer, vowelBonusScorer, scrabbleScorer];

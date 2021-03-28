@@ -127,7 +127,7 @@ function scorerPrompt() {
 function transform(pointStructure){
   for (property in pointStructure) {
     for (let i in pointStructure[property]){
-      newPointStructure[oldPointStructure[property][i].toLowerCase()] = property;
+      newPointStructure[oldPointStructure[property][i].toLowerCase()] = Number(property);
     }
   }
   return newPointStructure
